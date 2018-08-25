@@ -18,6 +18,6 @@ class LoginPage(BaseAction):
         self.click(self.login_button)
 
     def is_login_button_enabled(self):
-        if self.find_element(self.login_button).get_attribute("enabled"):
+        if self.find_element(self.login_button).get_attribute("enabled") == "ture":
             return True
         return False
