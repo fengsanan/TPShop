@@ -43,3 +43,18 @@ class BaseAction:
             return True
         except Exception:
             return False
+    # 判断元素是否可用
+    def is_feature_enabled(self, feature):
+        return self.find_element(feature).get_attribute("enabled") == "ture"
+
+    #判断元素是否可点击
+    def is_feature_clickable(self, feature):
+        return self.find_element(feature).get_attribute("clickable") == "ture"
+
+    # 判断元素是可能够找到
+    def is_feature_exist(self, feature):
+        try:
+            self.find_element(feature)
+            return True
+        except Exception:
+            return False
