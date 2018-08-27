@@ -20,4 +20,5 @@ class BaseDriver:
         desired_caps['appPackage'] = 'com.tpshop.malls'
         desired_caps['appActivity'] = '.SPMainActivity'
 
+
         return webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
